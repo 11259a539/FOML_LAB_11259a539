@@ -10,3 +10,10 @@ model = KNeighborsClassifier(n_neighbors=5)
 model.fit(X_train, y_train)                              
 
 print("Accuracy:", model.score(X_test, y_test)) 
+
+// predicted data
+
+species = ["setosa", "versicolor", "virginica"]      
+new_flower = [[5.1, 3.5, 1.4, 0.2]]                  
+answer = model.predict(new_flower)[0]                    
+print("This flower is:", species[answer]) 
